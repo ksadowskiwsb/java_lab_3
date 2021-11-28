@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,5 +17,25 @@ public class Main {
             oraz stworzyć listę typu najbardziej generycznego np. List<Budynek>
          */
 
+        Samochod samochod1 = new Samochod("Zielony", 12, 5);
+        Samochod samochod2 = new Samochod("Miedziany", 2, 5);
+
+        Wyscigowka wyscigowka1 = new Wyscigowka("Czerwony", 5, 3, 250, 1200);
+        Wyscigowka wyscigowka2 = new Wyscigowka("Zolty", 39, 3, 220, 900);
+
+        Ciezarowka ciezarowka1 = new Ciezarowka("Zardzewialy", 25, 3, 10000, 6);
+        Ciezarowka ciezarowka2 = new Ciezarowka("Bialy", 5, 3, 5000, 4);
+
+        List<Samochod> listaSamochodow = new ArrayList<>();
+        listaSamochodow.add(samochod1);
+        listaSamochodow.add(samochod2);
+        listaSamochodow.add(wyscigowka1);
+        listaSamochodow.add(wyscigowka2);
+        listaSamochodow.add(ciezarowka1);
+        listaSamochodow.add(ciezarowka2);
+
+        for (Samochod i : listaSamochodow) {
+            System.out.println(i.toString());
+        }
     }
 }
