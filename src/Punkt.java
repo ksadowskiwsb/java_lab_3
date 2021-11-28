@@ -1,6 +1,66 @@
 /* klasa Punkt */
-public class Punkt {
+class Punkt {
     /* stworzyć zmienne prywatne pX, pY, pZ */
+    private int pX;
+    private int pY;
+    private int pZ;
+
+    Punkt() {}
+
+    Punkt(int pX) {
+        this.pX = pX;
+    }
+
+    Punkt(int pX, int pY, int pZ) {
+        this.pX = pX;
+        this.pY = pY;
+        this.pZ = pZ;
+    }
+
+    public int getpX() {
+        return pX;
+    }
+
+    public int getpY() {
+        return pY;
+    }
+
+    public int getpZ() {
+        return pZ * 10;
+    }
+
+    public void setpX(int pX) {
+        this.pX = pX;
+    }
+
+    public void setpY(int pY) {
+        this.pY = pY;
+    }
+
+    public void setpZ(int pZ) {
+        this.pZ = pZ;
+    }
+
+    public int sum() {
+        return pX + pY + pZ;
+    }
+
+    public int difference() {
+        return pX - pY - pZ;
+    }
+
+    public int difference(int x, int y, int z) {
+        return pX * x - pY * y - pZ * z;
+    }
+
+    @Override
+    public String toString() {
+        return "Punkt{" +
+                "pX=" + pX +
+                ", pY=" + pY +
+                ", pZ=" + pZ +
+                '}';
+    }
 
     /* stworzyć
         a) pusty konstruktor,
